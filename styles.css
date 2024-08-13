@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('assets/york.jpg'); /* Caminho relativo ao CSS */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre o calendário e a caixa de reclamação */
+}
+
+.calendar {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #0011ff;
+    color: rgb(145, 233, 248);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#month-year {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+td {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+td:hover:not(.empty):not(.today):not(.holiday) {
+    background-color: #f1f1f1;
+}
+
+td.holiday {
+    background-color: #99adec;
+    color: #0004ff;
+    font-weight: bold;
+}
+
+td.today {
+    background-color: #e5dbf3;
+    color: #1976D2;
+    font-weight: bold;
+}
+
+td.empty {
+    background-color: hsl(0, 0%, 100%);
+    cursor: default;
+}
+
+.feedback {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.feedback h2 {
+    margin-top: 0;
+}
+
+.reclamacao-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reclamacao-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.reclamacao-form input, .reclamacao-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.reclamacao-form button {
+    padding: 10px;
+    background-color: #0011ff;
+    color: rgb(145, 233, 248);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reclamacao-form button:hover {
+    background-color: #45a049;
+}
